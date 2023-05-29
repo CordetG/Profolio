@@ -1,0 +1,53 @@
+header {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: var(--glaucous);
+}
+
+/* div banner element */
+.banner {
+	display: flex;
+	padding: 0 20px;
+}
+
+.banner-logo {
+	border-radius: 50%;
+}
+
+.banner-name {
+	font-size: 14px;
+	padding-left: 10px;
+}
+
+.banner-title {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+}
+
+/* navbar element */
+.nav-list {
+	list-style: none;
+	background-color: var(--eucalyptus);
+}
+
+.nav-item {
+	display: inline-flex;
+
+	list-style: none;
+}
+
+.nav-link {
+	top: 0;
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--eerie-black);
+	text-decoration-line: none;
+}
+
+.nav-link:hover {
+	background-color: var(--glaucous);
+}

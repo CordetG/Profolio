@@ -1,0 +1,21 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--eerie-black: #141810;
+	--mint: #ddeee4;
+	--glaucous: #677db7;
+	--eucalyptus: #a5be9d;
+}
+html {
+	background-color: var(--eerie-black);
+}
+
+body {
+	font-family: 'verdana', sans-serif;
+	font-size: 1em;
+	color: var(--mint);
+}
