@@ -1,0 +1,12 @@
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100vw;
+	text-align: center;
+	padding: 5px;
+	background-color: var(--eucalyptus);
+	color: var(--eerie-black);
+}
+
+.footer-notice {
+}

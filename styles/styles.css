@@ -10,12 +10,26 @@
 	--glaucous: #677db7;
 	--eucalyptus: #a5be9d;
 }
+
 html {
 	background-color: var(--eerie-black);
 }
 
 body {
-	font-family: 'verdana', sans-serif;
+	overflow: scroll;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	font-family: verdana, sans-serif;
 	font-size: 1em;
 	color: var(--mint);
+}
+
+main {
+	max-height: 35em;
+}
+
+main p {
+	max-height: 20em;
+	overflow: scroll;
 }

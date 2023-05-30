@@ -11,20 +11,35 @@ header {
 	padding: 0 20px;
 }
 
-.banner-logo {
-	border-radius: 50%;
+.banner-logoWrapper {
+	text-align: center;
 }
 
-.banner-name {
+.logoWrapper-logo {
+	border-radius: 50%;
+	margin: 5px;
+}
+
+.logoWrapper-authorName {
+	font-variant: small-caps;
+	display: block;
 	font-size: 14px;
-	padding-left: 10px;
 }
 
 .banner-title {
-	width: 100%;
+	/*font-family: "courier new", sans-serif;*/
+	font-family: monospace;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 3em;
+	width: 40em;
 	display: flex;
 	justify-content: center;
 	align-self: center;
+}
+
+.title-accent {
+	color: var(--eucalyptus);
 }
 
 /* navbar element */
@@ -35,7 +50,6 @@ header {
 
 .nav-item {
 	display: inline-flex;
-
 	list-style: none;
 }
 
