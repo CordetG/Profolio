@@ -16,7 +16,6 @@ html {
 }
 
 body {
-	overflow: scroll;
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
@@ -27,11 +26,7 @@ body {
 
 main {
 	max-height: 35em;
-}
-
-main p {
 	max-height: 20em;
-	overflow: scroll;
 }
 
 /* About Me Styles */
@@ -46,6 +41,7 @@ main p {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	overflow: scroll;
 }
 
 /* Bio pic is responsive */
