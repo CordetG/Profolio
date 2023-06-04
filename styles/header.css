@@ -1,38 +1,39 @@
 header {
 	display: flex;
 	flex-direction: column;
-	width: 100%;
+	width: 100vw;
 	background-color: var(--glaucous);
 }
 
 /* div banner element */
 .banner {
 	display: flex;
-	padding: 0 20px;
 }
 
 .banner-logoWrapper {
 	text-align: center;
+	padding: 10px;
 }
 
 .logoWrapper-logo {
 	border-radius: 50%;
-	margin: 5px;
 }
 
 .logoWrapper-authorName {
 	font-variant: small-caps;
 	display: block;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .banner-title {
 	/*font-family: "courier new", sans-serif;*/
+	position: absolute;
+	margin: auto;
 	font-family: monospace;
 	text-transform: uppercase;
 	font-weight: normal;
-	font-size: 3em;
-	width: 75%;
+	font-size: 5em;
+	width: 100vw;
 	display: flex;
 	justify-content: center;
 	align-self: center;

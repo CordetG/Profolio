@@ -1,4 +1,4 @@
-// Class Hello builds main -> bioContainer -> img; main -> bioContainer -> p -> span
+// Class Hello builds main -> bioContainer -> img; main -> bioContainer -> bioText
 class Hello {
 	constructor() {
 		this.main = document.querySelector('main');
@@ -68,6 +68,8 @@ class Hello {
 			make a positive impact in the field. Her ultimate goal is to develop AI systems that can 
 			assist with learning about the complexity of cognitive processes.`
 		];
+
+		// Seperate each paragraph with a break-line
 		for (const paragraph in bioArray) {
 			const bioText = document.createElement('p');
 			const htmlBreak = document.createElement('br');

@@ -1,7 +1,7 @@
 footer {
 	position: absolute;
 	bottom: 0;
-	align-self: 100vh 
+	align-self: 100vh;
 	width: 100vw;
 	text-align: center;
 	padding: 5px;
@@ -9,5 +9,6 @@ footer {
 	color: var(--eerie-black);
 }
 
-.footer-notice {
-}
+/*.footer-notice {
+	
+}*/

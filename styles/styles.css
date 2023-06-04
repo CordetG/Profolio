@@ -29,13 +29,12 @@ main {
 	max-height: 20em;
 }
 
-/* About Me Styles */
-.subheading-aboutMe {
+h2 {
 	text-align: center;
-	margin-top: 20px;
-	margin-bottom: 0;
+	margin: 15px 0;
 }
 
+/* About-Me Styles */
 .bioContainer {
 	display: flex;
 	flex-direction: column;
@@ -59,4 +58,16 @@ main {
 	max-width: 90%;
 	text-align: left;
 	overflow: scroll;
+}
+
+/*Previous-Work Styles*/
+.resumeContainer {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	margin: 0 10px;
+	gap: 10px;
+}
+
+.resumeCard--accentCard {
+	grid-row: span 4;
 }
