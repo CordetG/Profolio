@@ -113,3 +113,132 @@ h2 {
 	grid-row: 1 / span 3;
 	margin-right: 10px;
 }
+
+/* Form*/
+/* Code for exercise 04-form 
+Revamped this code for Exercise-02 hw3 */
+form {
+	padding: 25px 12px;
+	margin: 0 auto;
+	margin-top: 30px;
+	border: 1px solid var(--glaucous);
+	border-radius: 10px;
+	max-width: 400px;
+	max-height: 2em;
+	width: 100%;
+	min-height: 580px;
+}
+
+form h2 {
+	margin-bottom: 5px;
+}
+
+.form-instruction {
+	margin-top: 0;
+	color: var(--eucalyptus);
+}
+
+.form-box {
+	display: flex;
+	align-items: center;
+	padding: 8px;
+}
+
+.formBox-label {
+	font-weight: bold;
+	width: 40%;
+}
+
+.formBox-input {
+	display: inline-block;
+	font-size: 14px;
+	height: 25px;
+	width: 40%;
+	flex: 1;
+	overflow: auto;
+	border: 1px solid var(--eerie-black);
+}
+/*Box for the radio buttons*/
+.form-pronounSet {
+	display: inline-block;
+	margin: 15px 0;
+	padding: 0% 8px;
+	border: 0;
+	width: 100%;
+}
+
+/*Lengend of the radio buttons*/
+.formSet-legend {
+	font-weight: bold;
+}
+
+/* General form labels*/
+.formSet-label {
+	font-weight: normal;
+	margin-top: 0.2em;
+}
+
+.formSet-gender {
+	margin: 2px;
+}
+
+.form-buttonBox {
+	text-align: center;
+	width: 100%;
+	height: 50px;
+	margin-top: 10px;
+}
+
+.formBtn-submit,
+.formBtn-reset {
+	height: 100%;
+	width: 100%;
+	max-height: 40px;
+	max-width: 49%;
+	border: 1px solid var(--eerie-black);
+}
+
+.formBtn-submit {
+	background-color: var(--eucalyptus);
+	color: var(--mint);
+}
+
+.formBtn-reset {
+	background-color: var(--mint);
+}
+
+.formBtn-submit:hover {
+	background-color: var(--glaucous);
+}
+
+.formBtn-reset:hover {
+	background-color: var(--mint);
+}
+
+/* Required Astrisk Symbol*/
+.req {
+	font-weight: bolder;
+	color: var(--glaucous);
+}
+
+/* Highlight Invalid Boxes */
+.formBox-input:invalid:required,
+.formSet-input:invalid:required {
+	border: 1px solid var(--mint);
+	box-shadow: 0 0 1px 1px var(--mint), inset 0 0 1px 1px var(--glaucous),
+		0 0 3px 2px var(--glaucous);
+}
+
+/* Change values based on size of the screen */
+@media (max-width: 375px) {
+	.form-box {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		padding: 0%;
+	}
+	.formBox-label,
+	.formBox-input {
+		width: 100%;
+	}
+}

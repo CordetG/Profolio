@@ -13,7 +13,119 @@
 			<link rel="stylesheet" href="/styles/header.css" />
 			<script type="text/javascript" src="/scripts/header.js"></script>
 		</div>
-		<main>Cotact Form</main>
+		<main>
+			<form action="/submit">
+				<h2>Sign Up Form</h2>
+				<p class="form-instruction">
+					Fill up the items in the form below. <br />
+					<span class="req">*</span>
+					- Required field
+				</p>
+				<div class="form-box">
+					<label class="formBox-label" for="fullname"
+						>Name: <span class="req">*</span>
+					</label>
+					<input
+						class="formBox-input"
+						type="text"
+						id="fullname"
+						name="fullname"
+						placeholder="Full Name"
+						size="30"
+						maxlength="50"
+						required />
+				</div>
+				<div class="form-box">
+					<label class="formBox-label" for="username">Username:</label>
+					<input
+						class="formBox-input"
+						type="text"
+						id="username"
+						name="username"
+						placeholder="username"
+						size="30"
+						maxlength="50" />
+				</div>
+				<div class="form-box">
+					<label class="formBox-label" for="email"
+						>Email: <span class="req">*</span>
+					</label>
+					<input
+						class="formBox-input"
+						type="email"
+						id="email"
+						name="email"
+						placeholder="username@pdx.edu"
+						size="30"
+						maxlength="50"
+						required />
+				</div>
+				<div class="form-box">
+					<label class="formBox-label" for="password">Password:</label>
+					<input
+						class="formBox-input"
+						type="password"
+						id="password"
+						name="password"
+						placeholder="password"
+						size="30"
+						maxlength="50" />
+				</div>
+				<div class="form-box">
+					<label class="formBox-label" for="dob">Date of Birth:</label>
+					<input class="formBox-input" type="date" id="dob" name="dob" />
+				</div>
+				<fieldset class="form-pronounSet">
+					<legend class="formSet-legend" id="title">
+						Preferred Pronouns<span class="req"> *</span>
+					</legend>
+					<div class="formSet-gender">
+						<input
+							class="formSet-input"
+							type="radio"
+							required
+							id="female"
+							name="pronoun"
+							value="female" />
+						<label class="formSet-label" for="female">She/her</label>
+					</div>
+					<div class="formSet-gender">
+						<input
+							class="formSet-input"
+							type="radio"
+							required
+							id="male"
+							name="pronoun"
+							value="male" />
+						<label class="formSet-label" for="male">He/him</label>
+					</div>
+					<div class="formSet-gender">
+						<input
+							class="formSet-input"
+							type="radio"
+							required
+							id="nonbinary"
+							name="pronoun"
+							value="nonbinary" />
+						<label class="formSet-label" for="nonbinary">They/them</label>
+					</div>
+					<div class="formSet-gender">
+						<input
+							class="formSet-input"
+							type="radio"
+							required
+							id="omit"
+							name="pronoun"
+							value="omit" />
+						<label class="formSet-label" for="omit">I prefer not to say</label>
+					</div>
+				</fieldset>
+				<div class="form-buttonBox">
+					<input class="formBtn-submit" type="submit" value="Submit" />
+					<input class="formBtn-reset" type="reset" value="Reset" />
+				</div>
+			</form>
+		</main>
 		<div class="body-footer">
 			<link rel="stylesheet" href="/styles/footer.css" />
 			<script type="text/javascript" src="/scripts/footer.js"></script>
