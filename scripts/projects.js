@@ -35,6 +35,6 @@ const projectCards = [
         The Professional portfolio utilizes multiple stacks within web development including
         HTML, javascript, and CSS. Part of the implementation features a navbar, about section, 
         previous work section, projects page, and contact page. `,
-		link: ''
+		link: 'hi'
 	}
 ];
