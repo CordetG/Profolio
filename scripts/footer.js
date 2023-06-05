@@ -1,4 +1,4 @@
-const footerPath = '../footer.html';
+const footerPath = '../src/footer.html';
 const footerElement = document.querySelector('.body-footer');
 
 const fetchFooter = (path) => {
