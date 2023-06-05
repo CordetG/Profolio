@@ -7,7 +7,7 @@ class Projects {
 	}
 
 	buildShowcase = () => {
-		print('hi');
+		console.log('hi');
 	};
 
 	createCard = (cardSection) => {
