@@ -71,3 +71,45 @@ h2 {
 .resumeCard--accentCard {
 	grid-row: span 4;
 }
+
+.resumeCard-name {
+	font-size: 2em;
+}
+
+.resumeCard-pic,
+.resumeCard-name,
+.resumeCard-position {
+	text-align: center;
+	width: 100%;
+}
+
+.resumeCard {
+	gap: 50px;
+	background-color: grey;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.resumeCard-title {
+	border-bottom-width: 2px;
+	border-bottom-color: green;
+	border-bottom-style: solid;
+	margin-bottom: 10px;
+}
+
+.resumeCard-section {
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+	padding-bottom: 15px;
+	font-size: 1em;
+}
+
+.content-affiliations {
+	padding-top: 5px;
+	font-style: italic;
+}
+
+.content-date {
+	grid-row: 1 / span 3;
+	margin-right: 10px;
+}
