@@ -13,7 +13,7 @@ const projectCards = [
 	{
 		image: 'https://place-puppy.com/300x300',
 		title:
-			'Pawn Chess Optimization: Empirical Comparison of Minimax Algorithms',
+			'Pawn Chess Optimization: \nEmpirical Comparison of Minimax Algorithms',
 		description: `An implementation of minimax and alpha-beta pruning algorithms using
 		an heuristic agent and a random agent. Pawn chess is the game played by both agents
 		and the results determine how effective heuristics are in agent decisions and how
@@ -24,7 +24,7 @@ const projectCards = [
 	},
 	{
 		image: 'https://place-puppy.com/300x300',
-		title: 'Awerallusion: Visualizing the Beauty of Sound: [In Progress]',
+		title: 'Awerallusion:\nVisualizing the Beauty of Sound\n[In Progress]',
 		description: `The overall objective of creating Awerallusion is to develop a graphical integration
 		between different sounds and music. Awerallusion will mimic chromesthesia and provide a visual
 		cue for people who are just learning about the physics of sound by representing components of
@@ -96,23 +96,29 @@ class Projects {
 	};
 
 	addCardBtn = (linkDiv, link) => {
+		const btnPara = document.createElement('p');
 		const githubBtn = document.createElement('a');
-		githubBtn.setAttribute('class', 'githublink');
+		btnPara.setAttribute('class', 'githubLinkWrap');
+		githubBtn.setAttribute('class', 'githubLink');
 		githubBtn.setAttribute('href', link);
 		githubBtn.setAttribute('target', '_blank');
-		githubBtn.textContent = 'Go to Github Repo';
-		linkDiv.appendChild(githubBtn);
+		githubBtn.textContent = 'Checkout Github Repo';
+		btnPara.appendChild(githubBtn);
+		linkDiv.appendChild(btnPara);
 	};
 
 	addOtherLink(linkDiv, link, label) {
 		const para = document.createElement('p');
 		const otherLink = document.createElement('a');
+		const linkSpan = document.createElement('span');
 		para.setAttribute('class', 'otherLinkIntro');
 		otherLink.setAttribute('class', 'otherLink');
 		otherLink.setAttribute('href', link);
 		otherLink.setAttribute('target', '_blank');
-		para.textContent = 'Click here for additional resources: ';
-		otherLink.textContent = label;
+		para.textContent = 'Additional project deliverables: ';
+		otherLink.textContent = 'Click here to view \n';
+		linkSpan.textContent = label;
+		otherLink.appendChild(linkSpan);
 
 		para.appendChild(otherLink);
 		linkDiv.appendChild(para);

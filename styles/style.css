@@ -116,30 +116,43 @@ h2 {
 
 /* Projects Page */
 .cardsContainer {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-auto-rows: auto;
-	min-height: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
 }
 
 .projectCard {
-	display: grid;
-	height: 100%;
+	display: flex;
+	min-width: 250px;
+	flex: 1 1 0;
+	flex-direction: column;
+	justify-content: space-between;
 	margin: 10px;
 	padding: 0.5rem;
 }
 
 .imgSection {
+	margin-bottom: 10px;
 	max-height: 10em;
 }
 
-.projectDesc {
-	margin: 20px;
+.projectTitle {
+	margin-bottom: 10px;
+	border-bottom-style: solid;
+	white-space: pre-line;
 }
 
-.githublink {
-	align-self: center;
+.githubLinkWrap {
+	min-width: 100%;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.githubLink {
+	display: block;
 	padding: 20px;
+	margin: 0 auto;
+	max-width: 15em;
 	background-color: var(--glaucous);
 }
 
@@ -151,7 +164,31 @@ h2 {
 }
 
 .otherLinkIntro {
-	text-align: end;
+	margin-top: 20px;
+}
+
+.githubLink,
+.otherLink {
+	text-decoration: none;
+}
+
+.otherLink {
+	display: block;
+	text-align: center;
+	min-width: 100%;
+	padding: 10px 20px;
+}
+
+span {
+	white-space: pre;
+}
+
+.githubLink:hover {
+	background-color: darkmagenta;
+}
+
+.otherLink:hover {
+	color: deeppink;
 }
 
 /* Form*/
