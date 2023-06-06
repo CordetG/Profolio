@@ -5,33 +5,53 @@
 }
 
 :root {
-	--eerie-black: #141810;
+	--licorice: #200e08;
 	--mint: #ddeee4;
-	--glaucous: #677db7;
-	--eucalyptus: #a5be9d;
+	--taupe-gray: #9a949a;
+	--sage: #cfcb91;
+	--melon: #e09d8c;
+	--timberwolf: #e7ded9;
+	--night: #0b0a0b;
+	--abyss: #000000;
+	--black-olive: #1f271b;
+	--raspberry-rose: #b5446e;
 }
 
 html {
-	background-color: var(--eerie-black);
+	background-color: var(--abyss);
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
+	position: relative;
+	min-height: 100vh;
 	font-family: verdana, sans-serif;
 	font-size: 1em;
 	color: var(--mint);
 }
 
 main {
-	max-height: 35em;
-	max-height: 20em;
+	padding-bottom: 2rem;
 }
 
 h2 {
 	text-align: center;
 	margin: 15px 0;
+}
+
+/*Home page Styles*/
+.homeTitle {
+	text-align: center;
+}
+
+.homeMessage {
+	text-align: center;
+	margin: 0 20%;
+}
+
+.main-homepage {
+	margin: 10% 0;
+	display: block;
+	white-space: pre-line;
 }
 
 /* About-Me Styles */
@@ -46,7 +66,8 @@ h2 {
 /* Bio pic is responsive */
 .bioContainer-pic {
 	margin: 10px 0;
-	max-width: 15%;
+	width: 30%;
+	max-width: 240px;
 	max-height: 15%;
 	border-radius: 50%;
 }
@@ -54,7 +75,7 @@ h2 {
 /* Bio is responsive */
 .bioContainer-bio {
 	margin-top: 1.5%;
-	max-height: 11em;
+	max-height: 20em;
 	max-width: 90%;
 	text-align: left;
 	overflow: scroll;
@@ -66,6 +87,8 @@ h2 {
 	grid-template-columns: 1fr 3fr;
 	margin: 0 10px;
 	gap: 10px;
+	max-height: 100%;
+	overflow: scroll;
 }
 
 .resumeCard--accentCard {
