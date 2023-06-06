@@ -13,6 +13,7 @@ const fetchHeader = (path) => {
 			let docObj = new DOMParser();
 			const docHeader = docObj.parseFromString(html, 'text/html');
 			const headerToInsert = docHeader.querySelector('header');
+			console.log(headerToInsert);
 			headerElement.appendChild(headerToInsert);
 		})
 		.catch((error) => {
