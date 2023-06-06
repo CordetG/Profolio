@@ -1,4 +1,4 @@
-const footerPath = '/src/footer.html';
+const footerPath = '../src/footer.html';
 const footerElement = document.querySelector('.body-footer');
 
 const fetchFooter = (path) => {
@@ -7,6 +7,7 @@ const fetchFooter = (path) => {
 			if (response.ok) {
 				console.log('Footer loaded successfully!');
 			}
+			// Add throw error?
 			return response.text();
 		})
 		.then((html) => {

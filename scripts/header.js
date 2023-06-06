@@ -1,4 +1,4 @@
-const headerPath = '/src/header.html';
+const headerPath = '../src/header.html';
 const headerElement = document.querySelector('.body-header');
 
 const fetchHeader = (path) => {
