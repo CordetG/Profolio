@@ -1,6 +1,7 @@
 const footerPath = '../src/footer.html';
 const footerElement = document.querySelector('.body-footer');
 
+// Fetch the footer html to import to each html page
 const fetchFooter = (path) => {
 	fetch(path)
 		.then((response) => {

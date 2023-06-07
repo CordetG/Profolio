@@ -26,7 +26,6 @@ header {
 }
 
 .banner-title {
-	/*font-family: "courier new", sans-serif;*/
 	position: absolute;
 	margin: auto;
 	font-family: monospace;
@@ -40,23 +39,24 @@ header {
 }
 
 .title-accent {
-	color: var(--raspberry-rose);
+	color: var(--melon);
 }
 
 /* navbar element */
 .nav-list {
+	display: flex;
 	list-style: none;
 	background-color: var(--melon);
 }
 
 .nav-item {
-	display: inline-flex;
 	list-style: none;
 }
 
 .nav-link {
+	display: inline-block;
 	top: 0;
-	padding: 10px 15px;
+	padding: 15px;
 	text-transform: uppercase;
 	text-align: center;
 	color: var(--night);
@@ -68,5 +68,6 @@ header {
 }
 
 .nav-link.active {
-	background-color: var(--raspberry-rose);
+	background-color: var(--sage);
+	color: var(--licorice);
 }

@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Contact Form</title>
+		<!-- import favicon -->
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
@@ -20,9 +21,8 @@
 			sizes="16x16"
 			href="../favicon_io/favicon-16x16.png" />
 		<link rel="manifest" href="../favicon_io/site.webmanifest" />
+		<!-- import style sheet and javascript-->
 		<link type="text/css" rel="stylesheet" href="../styles/style.css" />
-		<!-- Import jQuery library -->
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script defer src="../scripts/contact.js"></script>
 	</head>
 	<body>
@@ -31,63 +31,17 @@
 			<script type="text/javascript" src="../scripts/header.js"></script>
 		</div>
 		<main>
-			<form action="../submit">
-				<h2>Contact Form</h2>
+			<h2>- Contact Me -</h2>
+			<!-- form -->
+			<form action="../submit" id="contactForm">
+				<h3>Contact Form</h3>
 				<p class="form-instruction">
 					Fill in the items in the form below. <br />
 					<span class="req">*</span>
 					- Required field
 				</p>
-				<div class="form-box">
-					<label class="formBox-label" for="fullname"
-						>Name: <span class="req">*</span>
-					</label>
-					<input
-						class="formBox-input"
-						type="text"
-						id="fullname"
-						name="fullname"
-						placeholder="Full Name"
-						size="30"
-						maxlength="50"
-						required />
-				</div>
-				<div class="form-box">
-					<label class="formBox-label" for="email"
-						>Email: <span class="req">*</span>
-					</label>
-					<input
-						class="formBox-input"
-						type="email"
-						id="email"
-						name="email"
-						placeholder="username@pdx.edu"
-						size="30"
-						maxlength="50"
-						required />
-				</div>
-				<div class="form-box">
-					<label class="formBox-label" for="contact">Contact Date:</label>
-					<input
-						class="formBox-input"
-						type="date"
-						id="contact"
-						name="contact" />
-				</div>
-				<div class="form-box">
-					<label class="formBox-label" for="info"
-						>Reason: <span class="req">*</span></label
-					>
-					<input
-						class="formBox-input"
-						type="text"
-						id="info"
-						name="info"
-						placeholder="Setup interview."
-						size="100"
-						maxlength="150"
-						required />
-				</div>
+				<!-- javascript input boxes-->
+				<!-- radio buttons -->
 				<fieldset class="form-pronounSet">
 					<legend class="formSet-legend" id="title">Preferred Pronouns</legend>
 					<div class="formSet-gender">
@@ -127,6 +81,7 @@
 						<label class="formSet-label" for="omit">I prefer not to say</label>
 					</div>
 				</fieldset>
+				<!-- submit / reset buttons-->
 				<div class="form-buttonBox">
 					<input class="formBtn-submit" type="submit" value="Submit" />
 					<input class="formBtn-reset" type="reset" value="Reset" />

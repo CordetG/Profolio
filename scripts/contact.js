@@ -1,3 +1,122 @@
+// --- Attribute data for form input boxes ---
+const inputBoxInfo = [
+	{
+		for: 'fullname',
+		label: 'Name: ',
+		class: 'formBox-input',
+		type: 'text',
+		id: 'fullname',
+		name: 'fullname',
+		placeholder: 'Full Name',
+		size: '30',
+		maxlength: '50',
+		required: true
+	},
+	{
+		for: 'email',
+		label: 'Email: ',
+		class: 'formBox-input',
+		type: 'email',
+		id: 'email',
+		name: 'email',
+		placeholder: 'username@pdx.edu',
+		size: '30',
+		maxlength: '50',
+		required: true
+	},
+	{
+		for: 'info',
+		label: 'Reason: ',
+		class: 'formBox-input',
+		type: 'text',
+		id: 'info',
+		name: 'info',
+		placeholder: 'Setup interview.',
+		size: '100',
+		maxlength: '150',
+		required: true
+	},
+	{
+		for: 'contact',
+		label: 'Contact Date: ',
+		class: 'formBox-input',
+		type: 'date',
+		id: 'contact',
+		name: 'contact',
+		placeholder: null,
+		size: null,
+		maxlength: null,
+		required: false
+	}
+];
+
+// --- Class for building the form ---
+class Form {
+	constructor() {
+		this.form = document.getElementById('contactForm');
+		this.radioButtons = document.querySelector('.form-pronounSet');
+	}
+
+	// Called from new object
+	buildForm = () => {
+		this.addBoxes();
+	};
+
+	// Creates all the attributes for the input boxes
+	addBoxes = () => {
+		for (let box = 0; box < 4; ++box) {
+			const inputBox = document.createElement('div');
+			const labelInput = document.createElement('div');
+			let formAttrNum = 8;
+			inputBox.setAttribute('class', 'form-box');
+			labelInput.setAttribute('class', 'formBox-label');
+			labelInput.setAttribute('for', `${inputBoxInfo[box].for}`);
+			labelInput.textContent = `${inputBoxInfo[box].label}`;
+			this.form.appendChild(inputBox);
+			if (box < 3) {
+				labelInput.appendChild(this.makeRequired());
+			} else {
+				formAttrNum = 4;
+			}
+			const inputInfo = this.addInputBoxes(inputBoxInfo[box], formAttrNum);
+			inputBox.appendChild(labelInput);
+			inputBox.appendChild(inputInfo);
+			this.form.insertBefore(inputBox, this.radioButtons);
+		}
+	};
+
+	// Make the classes required
+	makeRequired = () => {
+		const inputSpan = document.createElement('span');
+		inputSpan.setAttribute('class', 'req');
+		inputSpan.textContent = '*';
+		return inputSpan;
+	};
+
+	// Add input box attributes
+	addInputBoxes = (box, formAtt) => {
+		const inputInfo = document.createElement('input');
+		const classAttrList = [
+			'class',
+			'type',
+			'id',
+			'name',
+			'placeholder',
+			'size',
+			'maxlength',
+			'required'
+		];
+		for (let i = 0; i < formAtt; ++i) {
+			inputInfo.setAttribute(`${classAttrList[i]}`, `${box[classAttrList[i]]}`);
+		}
+		return inputInfo;
+	};
+}
+
+// --- Build the form ---
+const fillForm = new Form();
+fillForm.buildForm();
+
 // Print to the console on submit event
 let form = document.querySelector('form');
 form.onsubmit = (event) => {
@@ -38,6 +157,7 @@ formatDate = (dateInput) => {
 		  });
 };
 
+// Attempted to use form.elements as suggested, but it kept producing errors
 // Output all the general info
 outputGeneralInfo = () => {
 	// formBoxLabels = [Name:, Username:, ...]
@@ -68,14 +188,21 @@ outputGeneralInfo = () => {
 
 // Pronoun Legend outputs only one readio button
 outputPronouns = () => {
+	const buttons = document.querySelectorAll('input[type="radio"]');
+	const isNull = Array.from(buttons).every((radio) => !radio.checked);
+	const pronounTitle = null;
+
 	// Pronoun Label: User Choice
 	const pronounLabel = document
 		.querySelector('.formSet-legend')
 		.textContent.replace(' *', '')
 		.trim();
-	const pronounTitle = document.querySelector(
-		'[name=pronoun]:checked + label'
-	).textContent;
+	// Print and return
+	if (!isNull) {
+		pronounTitle = document.querySelector(
+			'[name=pronoun]:checked + label'
+		).textContent;
+	}
 
 	// Pronoun Label: pronouns
 	console.log(`${pronounLabel}: ${isNullInput(pronounTitle)}`);

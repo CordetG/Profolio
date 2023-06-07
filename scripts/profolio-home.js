@@ -8,6 +8,7 @@ function loadPage(event) {
 	addInspirationPhoto();
 }
 
+// Welcome message to the user
 homeMessage = () => {
 	const message = document.createElement('p');
 	message.setAttribute('class', 'homeMessage');
@@ -19,15 +20,10 @@ homeMessage = () => {
 	return message;
 };
 
+// Add background photo
 addInspirationPhoto = () => {
-	const imgObj = (document.body.style.backgroundImage =
-		"url('../images/rainbow-eucalyptus.jpg')");
+	document.body.style.backgroundImage =
+		"url('../images/rainbow-eucalyptus.jpg')";
 	document.body.style.backgroundRepeat = 'no-repeat';
-	/*const rainbowTree = document.createElement('img');
-	rainbowTree.setAttribute('class', 'background-pic');
-	rainbowTree.setAttribute('src', '../images/rainbow-eucalyptus.jpg');
-	rainbowTree.setAttribute(
-		'alt',
-		'Picture of a rainbow eucalyptus tree in Kauai, Hawaii'
-	);*/
+	document.body.style.backgroundPosition = 'left bottom';
 };

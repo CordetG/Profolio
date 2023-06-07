@@ -1,3 +1,4 @@
+// --- Array of projects to add to the projects page ---
 const projectCards = [
 	{
 		image: '../images/ProfolioSite.JPG',
@@ -46,6 +47,7 @@ const projectCards = [
 	}
 ];
 
+// --- Class To build cards for projects ---
 class Projects {
 	constructor() {
 		this.main = document.querySelector('main');
@@ -54,12 +56,14 @@ class Projects {
 		this.main.append(this.cardsContainer);
 	}
 
+	// function call for object
 	buildShowcase = () => {
 		for (const project in projectCards) {
 			this.cardsContainer.appendChild(this.createCard(projectCards[project]));
 		}
 	};
 
+	// Create the card to add to the container
 	createCard = (oneProject) => {
 		const card = document.createElement('article');
 		card.setAttribute('class', 'projectCard');
@@ -83,6 +87,7 @@ class Projects {
 		return card;
 	};
 
+	// --- Add each individual attribute to a card ---
 	addCardImage = (imgDiv, img) => {
 		const projectImage = document.createElement('img');
 		projectImage.setAttribute('class', 'projectImg');
@@ -139,5 +144,6 @@ class Projects {
 	}
 }
 
+// --- Create a project showcase object ---
 const projectShowcase = new Projects();
 projectShowcase.buildShowcase();

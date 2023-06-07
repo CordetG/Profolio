@@ -1,6 +1,7 @@
 const headerPath = '../src/header.html';
 const headerElement = document.querySelector('.body-header');
 
+// Fetch the header html to import into every html page
 const fetchHeader = (path) => {
 	fetch(path)
 		.then((response) => {
@@ -23,13 +24,19 @@ const fetchHeader = (path) => {
 // Toggle navbar link so that it appears disengaged while the user
 // is on that page.
 const navToggle = () => {
-	const linkToToggle = document.getElementsByClassName('nav-link');
-	console.log(linkToToggle);
-	linkToToggle[0].classList.add('active');
+	const currentUrl = window.location.href;
+	const activeNav = currentUrl.split('/').pop();
+	const elements = document.querySelectorAll('a');
+	const linksToToggle = Array.from(elements);
+	let linksToSearch = [];
+	for (const link in linksToToggle) {
+		linksToSearch.push(linksToToggle[link].href.split('/').pop());
+	}
+	const index = linksToSearch.indexOf(activeNav);
+	elements[index].classList.add('active');
 };
+
 window.addEventListener('load', () => {
 	fetchHeader(headerPath);
+	setTimeout(navToggle, 100);
 });
-/*document.addEventListener('DOMContentLoaded', function () {
-	navToggle();
-});*/

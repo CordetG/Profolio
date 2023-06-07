@@ -1,3 +1,4 @@
+/* --- global styles --- */
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -36,9 +37,10 @@ main {
 h2 {
 	text-align: center;
 	margin: 15px 0;
+	font-size: 36px;
 }
 
-/*Home page Styles*/
+/* --- Home page Styles --- */
 .subHeading-homepage {
 	display: block;
 	margin: 0 auto;
@@ -69,11 +71,6 @@ h2 {
 	color: var(--sage);
 }
 
-.background-pic {
-	top: 0;
-	left: 0;
-}
-
 /* About-Me Styles */
 .bioContainer {
 	display: flex;
@@ -95,12 +92,13 @@ h2 {
 /* Bio is responsive */
 .bioContainer-bio {
 	margin-top: 1.5%;
-	padding: 10px;
-	max-height: 20em;
+	margin-bottom: 2em;
+	padding: 20px;
 	max-width: 90%;
 	text-align: left;
 	overflow-y: scroll;
 	background-color: var(--black-olive);
+	border: groove 5px var(--raspberry-rose);
 }
 
 /* ------ Previous-Work Styles ----- */
@@ -112,6 +110,7 @@ h2 {
 	max-height: 100%;
 }
 
+/* accent card styles */
 .resumeCard--accentCard {
 	grid-row: span 4;
 	background-color: var(--hunter-green);
@@ -127,6 +126,7 @@ h2 {
 	border: 2px solid var(--melon);
 }
 
+/* all other resume cards */
 .resumeCard-position {
 	padding-bottom: 10px;
 	border-bottom: 2px solid var(--taupe-gray);
@@ -175,13 +175,14 @@ h2 {
 	margin-right: 10px;
 }
 
-/* -------- Projects Page ------ */
+/* -------- Projects Page Styles ------ */
 .cardsContainer {
 	display: flex;
 	flex-flow: row wrap;
 	width: 100%;
 }
 
+/* Card style */
 .projectCard {
 	display: flex;
 	min-width: 250px;
@@ -199,6 +200,13 @@ h2 {
 	max-height: 10em;
 }
 
+.projectImg {
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
 .projectTitle {
 	margin-bottom: 10px;
 	border-bottom-style: solid;
@@ -206,6 +214,7 @@ h2 {
 	white-space: pre-line;
 }
 
+/* link 'button' */
 .githubLinkWrap {
 	min-width: 100%;
 	margin-top: 10px;
@@ -222,13 +231,7 @@ h2 {
 	border-color: var(--black-olive);
 }
 
-.projectImg {
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-	object-fit: cover;
-	width: 100%;
-	height: 100%;
-}
-
+/* Other link styles */
 .otherLinkIntro {
 	margin-top: 20px;
 }
@@ -259,8 +262,7 @@ span {
 }
 
 /* Form*/
-/* Code from exercise 04-form 
-Revamped this code for Exercise-02 hw3 */
+/* Some code from hw3 */
 form {
 	padding: 25px 12px;
 	margin: 0 auto;
@@ -271,7 +273,7 @@ form {
 	max-height: 2em;
 	width: 100%;
 	min-height: 580px;
-	background-color: var(--taupe-gray);
+	background-color: var(--timberwolf);
 	color: var(--night);
 }
 
@@ -299,7 +301,7 @@ form {
 	flex: 1;
 	overflow: auto;
 	border: 1px solid var(--licorice);
-	background-color: var(--timberwolf);
+	background-color: var(--mint);
 }
 /*Box for the radio buttons*/
 .form-pronounSet {
@@ -347,7 +349,7 @@ form {
 }
 
 .formBtn-reset {
-	background-color: var(--timberwolf);
+	background-color: var(--sage);
 }
 
 .formBtn-submit:hover {
@@ -361,6 +363,7 @@ form {
 /* Required Astrisk Symbol*/
 .req {
 	font-weight: bolder;
+	font-size: larger;
 	color: var(--raspberry-rose);
 }
 

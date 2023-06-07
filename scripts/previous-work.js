@@ -1,4 +1,4 @@
-// Class Resume builds main -> resumeCards
+// --- const array of info to add to the resume page ---
 const resumeCards = [
 	{
 		title: 'Professional Experience',
@@ -169,6 +169,7 @@ const resumeCards = [
 	}
 ];
 
+// --- Class Resume builds main -> resumeCards ---
 class Resume {
 	constructor() {
 		this.main = document.querySelector('main');
@@ -177,6 +178,7 @@ class Resume {
 		this.main.append(this.resumeContainer);
 	}
 
+	// object calls this function to build the resume page
 	setupResume = () => {
 		this.resumeContainer.appendChild(this.addAccentCard());
 		for (const card in resumeCards) {
@@ -184,6 +186,7 @@ class Resume {
 		}
 	};
 
+	// creates the accent card (left)
 	addAccentCard = () => {
 		const accentCard = document.createElement('article');
 		const accentPic = document.createElement('img');
@@ -213,6 +216,7 @@ class Resume {
 		return accentCard;
 	};
 
+	// --- creates the remaining cards with their attributes ---
 	createCard = (cardSection) => {
 		const card = document.createElement('article');
 		card.setAttribute('class', 'resumeCard');
@@ -282,5 +286,6 @@ class Resume {
 	};
 }
 
+// --- Build the resume Page ---
 const buildResume = new Resume();
 buildResume.setupResume();
