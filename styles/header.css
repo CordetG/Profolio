@@ -2,7 +2,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	width: 100vw;
-	background-color: var(--glaucous);
+	background-color: var(--black-olive);
 }
 
 /* div banner element */
@@ -40,13 +40,13 @@ header {
 }
 
 .title-accent {
-	color: var(--eucalyptus);
+	color: var(--raspberry-rose);
 }
 
 /* navbar element */
 .nav-list {
 	list-style: none;
-	background-color: var(--eucalyptus);
+	background-color: var(--melon);
 }
 
 .nav-item {
@@ -59,10 +59,14 @@ header {
 	padding: 10px 15px;
 	text-transform: uppercase;
 	text-align: center;
-	color: var(--eerie-black);
+	color: var(--night);
 	text-decoration-line: none;
 }
 
 .nav-link:hover {
-	background-color: var(--glaucous);
+	background-color: var(--taupe-gray);
+}
+
+.active {
+	background-color: var(--raspberry-rose);
 }

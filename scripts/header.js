@@ -13,7 +13,6 @@ const fetchHeader = (path) => {
 			let docObj = new DOMParser();
 			const docHeader = docObj.parseFromString(html, 'text/html');
 			const headerToInsert = docHeader.querySelector('header');
-			console.log(headerToInsert);
 			headerElement.appendChild(headerToInsert);
 		})
 		.catch((error) => {
@@ -21,6 +20,29 @@ const fetchHeader = (path) => {
 		});
 };
 
+// Toggle navbar link so that it appears disengaged while the user
+// is on that page.
+const navToggle = () => {
+	$(document).on('click', '.nav-link', function (event) {
+		if (!$(this).hasClass('active')) {
+			$('.nav-link').removeClass('active');
+			$(this).addClass('active');
+		}
+		event.preventDefault();
+	});
+};
+
+const navActiveOnLoad = () => {
+	$(document).ready('.nav-link', function () {
+		if (!$(this).hasClass('active')) {
+			$('.nav-link').removeClass('active');
+			$(this).addClass('active');
+		}
+	});
+};
+
 window.addEventListener('load', () => {
 	fetchHeader(headerPath);
+	navActiveOnLoad();
+	navToggle();
 });

@@ -194,7 +194,10 @@ class Resume {
 		accentCard.classList.add('resumeCard--accentCard');
 
 		accentPic.setAttribute('class', 'resumeCard-pic');
-		accentPic.setAttribute('src', 'http://placekitten.com/200/300');
+		accentPic.setAttribute(
+			'src',
+			'../images/Cordet-Gula-Experience-Photo.jpeg'
+		);
 		accentPic.setAttribute('alt', 'Picture of Cordet and her Achievements');
 
 		accentName.setAttribute('class', 'resumeCard-name');

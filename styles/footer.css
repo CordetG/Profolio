@@ -5,8 +5,8 @@ footer {
 	height: 2rem;
 	text-align: center;
 	padding: 5px;
-	background-color: var(--eucalyptus);
-	color: var(--eerie-black);
+	background-color: var(--sage);
+	color: var(--night);
 }
 
 /*.footer-notice {

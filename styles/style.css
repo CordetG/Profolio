@@ -12,13 +12,13 @@
 	--melon: #e09d8c;
 	--timberwolf: #e7ded9;
 	--night: #0b0a0b;
-	--abyss: #000000;
 	--black-olive: #1f271b;
 	--raspberry-rose: #b5446e;
+	--hunter-green: #43543b;
 }
 
 html {
-	background-color: var(--abyss);
+	background-color: var(--night);
 }
 
 body {
@@ -39,8 +39,15 @@ h2 {
 }
 
 /*Home page Styles*/
-.homeTitle {
+.subHeading-homepage {
+	display: block;
+	margin: 0 auto;
 	text-align: center;
+	max-width: 50%;
+	border-bottom-style: solid;
+	border-bottom-color: var(--timberwolf);
+	border-bottom-width: 5px;
+	color: var(--melon);
 }
 
 .homeMessage {
@@ -52,6 +59,19 @@ h2 {
 	margin: 10% 0;
 	display: block;
 	white-space: pre-line;
+	background: linear-gradient(
+		to right,
+		var(--taupe-gray),
+		var(--black-olive),
+		var(--night) 70%
+	);
+	opacity: 0.75;
+	color: var(--sage);
+}
+
+.background-pic {
+	top: 0;
+	left: 0;
 }
 
 /* About-Me Styles */
@@ -70,18 +90,21 @@ h2 {
 	max-width: 240px;
 	max-height: 15%;
 	border-radius: 50%;
+	border: 5px solid var(--sage);
 }
 
 /* Bio is responsive */
 .bioContainer-bio {
 	margin-top: 1.5%;
+	padding: 10px;
 	max-height: 20em;
 	max-width: 90%;
 	text-align: left;
-	overflow: scroll;
+	overflow-y: scroll;
+	background-color: var(--black-olive);
 }
 
-/*Previous-Work Styles*/
+/* ------ Previous-Work Styles ----- */
 .resumeContainer {
 	display: grid;
 	grid-template-columns: 1fr 3fr;
@@ -93,10 +116,22 @@ h2 {
 
 .resumeCard--accentCard {
 	grid-row: span 4;
+	background-color: var(--hunter-green);
+	border: 3px solid var(--timberwolf);
 }
 
 .resumeCard-name {
 	font-size: 2em;
+}
+
+.resumeCard-pic {
+	border-radius: 5%;
+	border: 2px solid var(--melon);
+}
+
+.resumeCard-position {
+	padding-bottom: 10px;
+	border-bottom: 2px solid var(--taupe-gray);
 }
 
 .resumeCard-pic,
@@ -104,18 +139,23 @@ h2 {
 .resumeCard-position {
 	text-align: center;
 	width: 100%;
+	color: var(--mint);
 }
 
 .resumeCard {
 	gap: 50px;
-	background-color: grey;
 	border-radius: 10px;
 	padding: 10px;
 }
 
+.resumeCard:not(.resumeCard--accentCard) {
+	background-color: var(--taupe-gray);
+	color: var(--night);
+}
+
 .resumeCard-title {
-	border-bottom-width: 2px;
-	border-bottom-color: green;
+	border-bottom-width: 3px;
+	border-bottom-color: var(--hunter-green);
 	border-bottom-style: solid;
 	margin-bottom: 10px;
 }
@@ -137,7 +177,7 @@ h2 {
 	margin-right: 10px;
 }
 
-/* Projects Page */
+/* -------- Projects Page ------ */
 .cardsContainer {
 	display: flex;
 	flex-flow: row wrap;
@@ -152,6 +192,8 @@ h2 {
 	justify-content: space-between;
 	margin: 10px;
 	padding: 0.5rem;
+	background-color: var(--black-olive);
+	border-radius: 10px;
 }
 
 .imgSection {
@@ -162,6 +204,7 @@ h2 {
 .projectTitle {
 	margin-bottom: 10px;
 	border-bottom-style: solid;
+	border-bottom-color: var(--melon);
 	white-space: pre-line;
 }
 
@@ -176,7 +219,9 @@ h2 {
 	padding: 20px;
 	margin: 0 auto;
 	max-width: 15em;
-	background-color: var(--glaucous);
+	background-color: var(--sage);
+	color: var(--night);
+	border-color: var(--black-olive);
 }
 
 .projectImg {
@@ -200,6 +245,7 @@ h2 {
 	text-align: center;
 	min-width: 100%;
 	padding: 10px 20px;
+	color: var(--sage);
 }
 
 span {
@@ -207,11 +253,11 @@ span {
 }
 
 .githubLink:hover {
-	background-color: darkmagenta;
+	background-color: var(--raspberry-rose);
 }
 
 .otherLink:hover {
-	color: deeppink;
+	color: var(--raspberry-rose);
 }
 
 /* Form*/
@@ -221,21 +267,19 @@ form {
 	padding: 25px 12px;
 	margin: 0 auto;
 	margin-top: 30px;
-	border: 1px solid var(--glaucous);
+	border: 5px solid var(--black-olive);
 	border-radius: 10px;
 	max-width: 400px;
 	max-height: 2em;
 	width: 100%;
 	min-height: 580px;
-}
-
-h2 {
-	margin-bottom: 5px;
+	background-color: var(--taupe-gray);
+	color: var(--night);
 }
 
 .form-instruction {
 	margin-top: 0;
-	color: var(--eucalyptus);
+	color: var(--black-olive);
 }
 
 .form-box {
@@ -256,7 +300,8 @@ h2 {
 	width: 40%;
 	flex: 1;
 	overflow: auto;
-	border: 1px solid var(--eerie-black);
+	border: 1px solid var(--licorice);
+	background-color: var(--timberwolf);
 }
 /*Box for the radio buttons*/
 .form-pronounSet {
@@ -295,38 +340,38 @@ h2 {
 	width: 100%;
 	max-height: 40px;
 	max-width: 49%;
-	border: 1px solid var(--eucalyptus);
+	border: 1px solid var(--licorice);
 }
 
 .formBtn-submit {
-	background-color: var(--eucalyptus);
+	background-color: var(--hunter-green);
 	color: var(--mint);
 }
 
 .formBtn-reset {
-	background-color: var(--mint);
+	background-color: var(--timberwolf);
 }
 
 .formBtn-submit:hover {
-	background-color: var(--glaucous);
+	background-color: var(--licorice);
 }
 
 .formBtn-reset:hover {
-	background-color: var(--glaucous);
+	background-color: var(--melon);
 }
 
 /* Required Astrisk Symbol*/
 .req {
 	font-weight: bolder;
-	color: var(--glaucous);
+	color: var(--raspberry-rose);
 }
 
 /* Highlight Invalid Boxes */
 .formBox-input:invalid:required,
 .formSet-input:invalid:required {
-	border: 1px solid var(--mint);
-	box-shadow: 0 0 1px 1px var(--mint), inset 0 0 1px 1px var(--glaucous),
-		0 0 3px 2px var(--glaucous);
+	border: 1px solid var(--raspberry-rose);
+	box-shadow: 0 0 1px 1px var(--raspberry-rose),
+		inset 0 0 1px 1px var(--raspberry-rose), 0 0 3px 2px var(--raspberry-rose);
 }
 
 /* Change values based on size of the screen */
