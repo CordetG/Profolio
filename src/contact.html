@@ -32,9 +32,9 @@
 		</div>
 		<main>
 			<form action="../submit">
-				<h2>Sign Up Form</h2>
+				<h2>Contact Form</h2>
 				<p class="form-instruction">
-					Fill up the items in the form below. <br />
+					Fill in the items in the form below. <br />
 					<span class="req">*</span>
 					- Required field
 				</p>
@@ -53,17 +53,6 @@
 						required />
 				</div>
 				<div class="form-box">
-					<label class="formBox-label" for="username">Username:</label>
-					<input
-						class="formBox-input"
-						type="text"
-						id="username"
-						name="username"
-						placeholder="username"
-						size="30"
-						maxlength="50" />
-				</div>
-				<div class="form-box">
 					<label class="formBox-label" for="email"
 						>Email: <span class="req">*</span>
 					</label>
@@ -78,29 +67,33 @@
 						required />
 				</div>
 				<div class="form-box">
-					<label class="formBox-label" for="password">Password:</label>
+					<label class="formBox-label" for="contact">Contact Date:</label>
 					<input
 						class="formBox-input"
-						type="password"
-						id="password"
-						name="password"
-						placeholder="password"
-						size="30"
-						maxlength="50" />
+						type="date"
+						id="contact"
+						name="contact" />
 				</div>
 				<div class="form-box">
-					<label class="formBox-label" for="dob">Date of Birth:</label>
-					<input class="formBox-input" type="date" id="dob" name="dob" />
+					<label class="formBox-label" for="info"
+						>Reason: <span class="req">*</span></label
+					>
+					<input
+						class="formBox-input"
+						type="text"
+						id="info"
+						name="info"
+						placeholder="Setup interview."
+						size="100"
+						maxlength="150"
+						required />
 				</div>
 				<fieldset class="form-pronounSet">
-					<legend class="formSet-legend" id="title">
-						Preferred Pronouns<span class="req"> *</span>
-					</legend>
+					<legend class="formSet-legend" id="title">Preferred Pronouns</legend>
 					<div class="formSet-gender">
 						<input
 							class="formSet-input"
 							type="radio"
-							required
 							id="female"
 							name="pronoun"
 							value="female" />
@@ -110,7 +103,6 @@
 						<input
 							class="formSet-input"
 							type="radio"
-							required
 							id="male"
 							name="pronoun"
 							value="male" />
@@ -120,7 +112,6 @@
 						<input
 							class="formSet-input"
 							type="radio"
-							required
 							id="nonbinary"
 							name="pronoun"
 							value="nonbinary" />
@@ -130,7 +121,6 @@
 						<input
 							class="formSet-input"
 							type="radio"
-							required
 							id="omit"
 							name="pronoun"
 							value="omit" />

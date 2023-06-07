@@ -20,14 +20,9 @@ isNullInput = (userInput) => {
 	return userInput ? userInput : '-----';
 };
 
-// Check if the element is a password, skip output if it is
-isPassword = (userPassword) => {
-	return userPassword == 'Password:' ? 1 : 0;
-};
-
 // Check for birthdate (needed for reformatting)
-isDateOfBirth = (contentType) => {
-	return contentType == 'Date of Birth:' ? true : false;
+isDate = (contentType) => {
+	return contentType == 'contact:' ? true : false;
 };
 
 // Reformate the user's birthdaye to 'Month day, year' Ex: July 28, 2023
@@ -49,8 +44,6 @@ outputGeneralInfo = () => {
 	const formBoxLabels = document.querySelectorAll('.formBox-label');
 
 	for (let i = 0; i < formBoxLabels.length; i++) {
-		// Omit password from output
-		i += isPassword(formBoxLabels[i].textContent);
 		// More semantic use to outptu label: info
 		const formLabelToLog = formBoxLabels[i].textContent;
 		const formValueToLog = document.getElementById(
@@ -58,7 +51,7 @@ outputGeneralInfo = () => {
 		).value;
 
 		// Need to reformat the date of birth
-		if (isDateOfBirth(formLabelToLog)) {
+		if (isDate(formLabelToLog)) {
 			console.log(
 				`${formLabelToLog} ${isNullInput(formatDate(formValueToLog))}`
 			);
@@ -75,7 +68,7 @@ outputGeneralInfo = () => {
 
 // Pronoun Legend outputs only one readio button
 outputPronouns = () => {
-	// Pronound Label: User Choice
+	// Pronoun Label: User Choice
 	const pronounLabel = document
 		.querySelector('.formSet-legend')
 		.textContent.replace(' *', '')

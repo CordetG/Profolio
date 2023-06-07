@@ -67,6 +67,6 @@ header {
 	background-color: var(--taupe-gray);
 }
 
-.active {
+.nav-link.active {
 	background-color: var(--raspberry-rose);
 }

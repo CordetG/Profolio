@@ -1,6 +1,6 @@
 const projectCards = [
 	{
-		image: 'https://place-puppy.com/300x300',
+		image: '../images/ProfolioSite.JPG',
 		title: 'Professional Portfolio',
 		description: `A portfolio website that highlights Cordet and her professional experience. 
         The Professional portfolio utilizes multiple stacks within web development including
@@ -11,7 +11,7 @@ const projectCards = [
 		otherName: 'Deployed Website'
 	},
 	{
-		image: 'https://place-puppy.com/300x300',
+		image: '../images/AIChessPlayer.JPG',
 		title:
 			'Pawn Chess Optimization: \nEmpirical Comparison of Minimax Algorithms',
 		description: `An implementation of minimax and alpha-beta pruning algorithms using
@@ -23,7 +23,7 @@ const projectCards = [
 		otherName: 'Project Report [pdf]'
 	},
 	{
-		image: 'https://place-puppy.com/300x300',
+		image: '../images/awerallusion-card-photo.jpg',
 		title: 'Awerallusion:\nVisualizing the Beauty of Sound\n[In Progress]',
 		description: `The overall objective of creating Awerallusion is to develop a graphical integration
 		between different sounds and music. Awerallusion will mimic chromesthesia and provide a visual
@@ -32,6 +32,17 @@ const projectCards = [
 		link: 'https://github.com/CordetG/Awerallusion',
 		other: '../files/CS510_Awerallusion_Proposal.pdf',
 		otherName: 'Project Proposal [pdf]'
+	},
+	{
+		image: '../images/tic-tac-toe-agent.JPG',
+		title: 'Artificial Intelligence:\nTic-Tac-Toe Agent',
+		description: `An agent [named: MINT] built to learn to play tic-tac-toe.
+		The agent uses Q-learning as an extension of the temporal difference learning model
+		to figure out the best way to play tic-tac-toe. The model uses a combination of
+		exploration and exploitation as part of the epsilon greedy strategy.`,
+		link: 'https://github.com/CordetG/tic-tac-toe-agent',
+		other: '',
+		otherName: ''
 	}
 ];
 
@@ -116,7 +127,10 @@ class Projects {
 		otherLink.setAttribute('href', link);
 		otherLink.setAttribute('target', '_blank');
 		para.textContent = 'Additional project deliverables: ';
-		otherLink.textContent = 'Click here to view \n';
+		otherLink.textContent =
+			link == ''
+				? 'This project has no files to display \n'
+				: 'Click here to view \n';
 		linkSpan.textContent = label;
 		otherLink.appendChild(linkSpan);
 
