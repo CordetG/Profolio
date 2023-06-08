@@ -1,6 +1,6 @@
 # Cordet Gula's Professional Portfolio
 
-![Alt text](image/Profolio-image.JPG 'Profoilio Home')
+![Profolio-image](https://github.com/CordetG/Profolio/assets/115206755/2f0a5319-6a48-4e04-a8a2-1f97931fffb1)
 
 ## Project Description
 
