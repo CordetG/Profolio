@@ -1,5 +1,7 @@
 # Cordet Gula's Professional Portfolio
 
+![Alt text](image/Profolio-image.JPG 'Profoilio Home')
+
 ## Project Description
 
 Profolio is the website created to showcase my personal professional expereince with both a technical stack, previous work history, and personal biography information about myself. The website itself is showcasing my ability to build a website using javascript, CSS, and HTML. My website is deployed using github pages at
