@@ -266,8 +266,9 @@ class Resume {
 		return cardSubText;
 	};
 
+	// Made this a header because WAVE recommended it
 	addSectionAffiliation = (card, affiliate) => {
-		const cardSubText = document.createElement('p');
+		const cardSubText = document.createElement('h5');
 		cardSubText.setAttribute('class', 'content-affiliations');
 		const place = card.affiliation[affiliate];
 		cardSubText.textContent = place;

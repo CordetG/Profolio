@@ -94,7 +94,7 @@ class Projects {
 		projectImage.setAttribute('src', project.image);
 		projectImage.setAttribute(
 			'alt',
-			'Picture of author project' + `${project.link.split('/').pop()}`
+			'Picture of author project ' + `${project.link.split('/').pop()}`
 		);
 
 		imgDiv.appendChild(projectImage);
