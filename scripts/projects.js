@@ -78,7 +78,7 @@ class Projects {
 		card.appendChild(linkDiv);
 		this.cardsContainer.appendChild(card);
 
-		this.addCardImage(imgDiv, oneProject.image);
+		this.addCardImage(imgDiv, oneProject);
 		this.addCardTitle(txtDiv, oneProject.title);
 		this.addCardDescription(txtDiv, oneProject.description);
 		this.addCardBtn(linkDiv, oneProject.link);
@@ -88,13 +88,13 @@ class Projects {
 	};
 
 	// --- Add each individual attribute to a card ---
-	addCardImage = (imgDiv, img) => {
+	addCardImage = (imgDiv, project) => {
 		const projectImage = document.createElement('img');
 		projectImage.setAttribute('class', 'projectImg');
-		projectImage.setAttribute('src', img);
+		projectImage.setAttribute('src', project.image);
 		projectImage.setAttribute(
 			'alt',
-			'Picture of author project' + `${img.split('/').pop()}`
+			'Picture of author project' + `${project.link.split('/').pop()}`
 		);
 
 		imgDiv.appendChild(projectImage);
@@ -138,7 +138,7 @@ class Projects {
 		otherLink.textContent =
 			link == ''
 				? 'This project has no files to display. \n'
-				: 'Additional project deliverables [opens an external window]: \n';
+				: 'Link opens an external window: \n';
 		linkSpan.textContent = label;
 		otherLink.appendChild(linkSpan);
 
