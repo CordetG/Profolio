@@ -138,7 +138,7 @@ class Projects {
 		otherLink.textContent =
 			link == ''
 				? 'This project has no files to display. \n'
-				: 'Link opens an external window: \n';
+				: 'Additional project deliverables [opens an external window]: \n';
 		linkSpan.textContent = label;
 		otherLink.appendChild(linkSpan);
 
