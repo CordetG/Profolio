@@ -92,7 +92,10 @@ class Projects {
 		const projectImage = document.createElement('img');
 		projectImage.setAttribute('class', 'projectImg');
 		projectImage.setAttribute('src', img);
-		projectImage.setAttribute('alt', 'Picture of author project');
+		projectImage.setAttribute(
+			'alt',
+			'Picture of author project' + `${img.split('/').pop()}`
+		);
 
 		imgDiv.appendChild(projectImage);
 	};
@@ -135,7 +138,7 @@ class Projects {
 		otherLink.textContent =
 			link == ''
 				? 'This project has no files to display. \n'
-				: 'Additional project deliverables [opens an external window]: \n';
+				: 'Link opens an external window: \n';
 		linkSpan.textContent = label;
 		otherLink.appendChild(linkSpan);
 
