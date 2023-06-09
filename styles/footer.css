@@ -1,4 +1,4 @@
-footer {
+.footer {
 	position: absolute;
 	bottom: 0;
 	width: 100vw;
@@ -7,4 +7,11 @@ footer {
 	padding: 5px;
 	background-color: var(--sage);
 	color: var(--night);
+}
+
+@media (max-width: 600px) {
+	.footer {
+		font-size: 14px;
+		text-align: left;
+	}
 }

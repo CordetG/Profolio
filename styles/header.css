@@ -5,9 +5,16 @@ header {
 	background-color: var(--black-olive);
 }
 
+nav {
+	max-width: 100vw;
+	max-height: max-content;
+}
+
 /* div banner element */
 .banner {
 	display: flex;
+	min-width: 100vw;
+	text-align: center;
 }
 
 .banner-logoWrapper {
@@ -17,6 +24,7 @@ header {
 
 .logoWrapper-logo {
 	border-radius: 50%;
+	max-width: 8vw;
 }
 
 .logoWrapper-authorName {
@@ -31,8 +39,8 @@ header {
 	font-family: monospace;
 	text-transform: uppercase;
 	font-weight: normal;
-	font-size: 5em;
-	width: 100vw;
+	font-size: 9vw;
+	min-width: 100vw;
 	display: flex;
 	justify-content: center;
 	align-self: center;
@@ -47,15 +55,18 @@ header {
 	display: flex;
 	list-style: none;
 	background-color: var(--melon);
+	max-width: 100vw;
 }
 
 .nav-item {
 	list-style: none;
+	text-align: center;
 }
 
 .nav-link {
 	display: inline-block;
 	height: 100%;
+	font-size: 2.5vw;
 	padding: 15px;
 	text-transform: uppercase;
 	text-align: center;
@@ -70,4 +81,25 @@ header {
 .nav-link.active {
 	background-color: var(--sage);
 	color: var(--licorice);
+}
+
+@media (min-width: 700px) {
+	.banner-title {
+		font-size: 64px;
+	}
+	.nav-link {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 850px) {
+	.nav-list {
+		flex-direction: column;
+	}
+	.nav-link {
+		text-align: start;
+		min-width: 100%;
+		font-size: 14px;
+		padding: 10px;
+	}
 }

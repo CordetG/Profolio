@@ -31,7 +31,7 @@ body {
 }
 
 main {
-	padding-bottom: 2rem;
+	padding-bottom: 2.5rem;
 }
 
 h2 {
@@ -43,7 +43,7 @@ h2 {
 /* --- Home page Styles --- */
 
 .main-homepage {
-	margin: 10% 0;
+	margin: 10% 0 0 0;
 	display: block;
 	white-space: pre-line;
 	background: linear-gradient(
@@ -75,10 +75,8 @@ h2 {
 
 /* Change values based on size of the screen */
 @media (max-width: 650px) {
-	.subheading-homepage {
-		min-width: 90%;
-		margin-bottom: 1em;
-		border-bottom-style: dashed;
+	.subHeading-homepage {
+		max-width: 90%;
 	}
 }
 
@@ -106,6 +104,7 @@ h2 {
 	margin-bottom: 2em;
 	padding: 20px;
 	max-width: 90%;
+	max-height: 75vh;
 	text-align: left;
 	overflow-y: scroll;
 	background-color: var(--black-olive);
@@ -184,6 +183,16 @@ h2 {
 .content-date {
 	grid-row: 1 / span 3;
 	margin-right: 10px;
+}
+
+@media (max-width: 800px) {
+	.resumeCard--accentCard {
+		display: none;
+	}
+	.resumeContainer {
+		grid-template-columns: 1fr;
+		font-size: 0.75em;
+	}
 }
 
 /* -------- Projects Page Styles ------ */
