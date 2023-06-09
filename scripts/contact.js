@@ -66,7 +66,7 @@ class Form {
 	addBoxes = () => {
 		for (let box = 0; box < 4; ++box) {
 			const inputBox = document.createElement('div');
-			const labelInput = document.createElement('div');
+			const labelInput = document.createElement('label');
 			let formAttrNum = 8;
 			inputBox.setAttribute('class', 'form-box');
 			labelInput.setAttribute('class', 'formBox-label');
