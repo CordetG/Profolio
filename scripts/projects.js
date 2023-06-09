@@ -134,8 +134,8 @@ class Projects {
 		para.textContent = 'Additional project deliverables: ';
 		otherLink.textContent =
 			link == ''
-				? 'This project has no files to display \n'
-				: 'Click here to view \n';
+				? 'This project has no files to display. \n'
+				: 'Additional project deliverables [opens an external window]: \n';
 		linkSpan.textContent = label;
 		otherLink.appendChild(linkSpan);
 
