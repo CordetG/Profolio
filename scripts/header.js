@@ -38,5 +38,12 @@ const navToggle = () => {
 
 window.addEventListener('load', () => {
 	fetchHeader(headerPath);
-	setTimeout(navToggle, 100);
+	/* Due to incredibly slow loading in chrome, add check to 
+	increase loading time of the header
+	https://codepedia.info/detect-browser-in-javascript */
+	if (navigator.userAgent.match(/chrome|chromium|crios/i)) {
+		setTimeout(navToggle, 600);
+	} else {
+		setTimeout(navToggle, 100);
+	}
 });

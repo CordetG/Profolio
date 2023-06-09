@@ -41,21 +41,6 @@ h2 {
 }
 
 /* --- Home page Styles --- */
-.subHeading-homepage {
-	display: block;
-	margin: 0 auto;
-	text-align: center;
-	max-width: 50%;
-	border-bottom-style: solid;
-	border-bottom-color: var(--timberwolf);
-	border-bottom-width: 5px;
-	color: var(--melon);
-}
-
-.homeMessage {
-	text-align: center;
-	margin: 0 20%;
-}
 
 .main-homepage {
 	margin: 10% 0;
@@ -71,7 +56,33 @@ h2 {
 	color: var(--sage);
 }
 
-/* About-Me Styles */
+.subHeading-homepage {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	max-width: 50%;
+	border-bottom-style: solid;
+	border-bottom-color: var(--timberwolf);
+	border-bottom-width: 5px;
+	margin-bottom: 2em;
+	color: var(--melon);
+}
+
+.homeMessage {
+	text-align: center;
+	margin: 0 20%;
+}
+
+/* Change values based on size of the screen */
+@media (max-width: 650px) {
+	.subheading-homepage {
+		min-width: 90%;
+		margin-bottom: 1em;
+		border-bottom-style: dashed;
+	}
+}
+
+/* --- About-Me Styles --- */
 .bioContainer {
 	display: flex;
 	flex-direction: column;
